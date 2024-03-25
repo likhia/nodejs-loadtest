@@ -3,7 +3,7 @@ import { check } from 'k6';
 
 export default function () {
     const rnd = Math.floor(Math.random() * 100000);
-    const response = http.get(`http://<host>:<port>/modify?name_${rnd}`);
+    const response = http.get(`http://<host>:<port>/modify?name=name_${rnd}`);
 }
 
 export let options = {
