@@ -2,7 +2,7 @@ import http from 'k6/http';
 import { check } from 'k6';
 
 export default function () {
-    const rnd = Math.floor(Math.random() * 1000);
+    const rnd = Math.floor(Math.random() * 100000);
     const response = http.get(`http://<host>:<port>/modify?name_${rnd}`);
 }
 
